@@ -59,6 +59,7 @@
     .room {
         &__content {
             &__list--is-active {
+                white-space: nowrap;
                 grid-template-columns: 1fr 1fr;
             }
 
