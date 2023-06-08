@@ -1,5 +1,7 @@
 import prettyMilliseconds from 'pretty-ms';
 
+AOS.init();
+
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
     var timer = setInterval(contador, 1000) 
