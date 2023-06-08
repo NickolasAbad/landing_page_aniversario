@@ -1,0 +1,76 @@
+@use 'variaveis';
+
+.hero {
+    &__content {
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 5.6vw;
+
+        &__title {
+            padding-top: 80px;
+        }
+
+        &__infos {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: left;
+            margin: 32px auto;
+            background-color: variaveis.$lightTextColor;
+            border-radius: 16px;
+
+            &__info {
+                margin-top: 24px;
+                margin-bottom: 24px;
+
+                .text--big {
+                    color: variaveis.$titleColor;
+                    font-weight: 800;
+                }
+            }
+
+            .button {
+                padding: 16px 32px;
+                border-radius: 16px;
+                text-align: center;
+            }
+        }
+
+        .formatador {
+            color: #990099;
+        }
+    }
+
+    .title--small {
+        color: variaveis.$lightTextColor;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        &__content {
+            &__title {
+                padding-top: 60px;
+            }
+
+            &__infos {
+                flex-direction: column;
+                align-items: center;
+
+                &__info {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+                
+                .button {
+                    margin-bottom: 16px;
+                }
+            }
+
+            .title--big {
+                font-size: 32px;
+            }
+        }
+    }
+}

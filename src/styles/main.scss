@@ -1,0 +1,173 @@
+@use 'hero';
+@use 'variaveis';
+@use 'room';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: #040714;
+}
+
+.container {
+    max-width: 70vw;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title--big {
+    font-size: 58px;
+    line-height: 80px;
+    letter-spacing: .2px;
+    font-weight: 800;
+    color: variaveis.$lightTextColor;
+}
+
+.title--medium {
+    font-size: 40px;
+    line-height: 56px;
+    letter-spacing: .2px;
+    font-weight: 700;
+    color: variaveis.$lightTextColor;
+}
+
+.title--small {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    color: variaveis.$lightTextColor;
+}
+
+.text--big {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: .2px;
+    font-weight: 400;
+    color: variaveis.$textColor;
+}
+
+.text--medium {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: .2px;
+    font-weight: 400;
+    color: variaveis.$textColor;
+}
+
+.text--small {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: .2px;
+    font-weight: 400;
+    color: variaveis.$textColor;
+}
+
+.button {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    text-align: center;
+    padding: 15px 36px;
+    border: none;
+    border-radius: 36px;
+    background-color: variaveis.$buttonColor;
+    cursor: pointer;
+}
+
+.button--transparent {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    text-align: center;
+    padding: 15px 36px;
+    background-color: transparent;
+    border-radius: 36px;
+    border: 1px solid variaveis.$buttonColor;
+    cursor: pointer;
+}
+
+.image-text-section {
+    display: grid;
+    padding-top: 8.4vw;
+    padding-bottom: 8.4vw;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+
+    h2 {
+        padding-bottom: 1vw;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    &--image-right {
+        direction: rtl;
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 85vw;
+    }
+
+    .title--big {
+        font-size: 40px;
+        line-height: 56px;
+    }
+
+    .title--medium {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .title--small, .text--big {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .text--medium {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .text--small {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .button, .button--transparent {
+        padding: 10px 20px;
+    }
+
+    .image-text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        img {
+            margin-top: 48px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .image-text-section__text_container {
+        margin-top: 20px;
+    }
+}
